@@ -1,10 +1,8 @@
-/* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {StatusBar} from 'react-native';
-import Home from '../modules/home';
-import More from '../modules/more';
-import Profile from '../modules/profile';
+import BottomNavigator from './BottomNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,9 +16,7 @@ export const RootNavigator = () => {
           animation: 'slide_from_right',
           headerShown: false,
         }}>
-        <Stack.Screen component={Home} name={'Home'} />
-        <Stack.Screen component={More} name={'More'} />
-        <Stack.Screen component={Profile} name={'Profile'} />
+        <Stack.Screen component={BottomNavigator} name="BottomNavigator" />
       </Stack.Navigator>
     </NavigationContainer>
   );
